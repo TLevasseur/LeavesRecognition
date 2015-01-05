@@ -12,7 +12,7 @@ thisData = zeros(length(files), TIMVECTEUR_SIZE + 1); % + 1 for label
 i = 1;
 for file = files'
     
-    disp(strcat('  Processing ', file.name));
+    disp(strcat('  Processing : ', file.name));
     img = imread(strcat('../Acer palmaturu BW/', file.name), 'tiff');
     
     vect = [1 TIMVecteur(img)'];
@@ -33,10 +33,10 @@ thisData = zeros(length(files), TIMVECTEUR_SIZE + 1); % + 1 for label
 i = 1;
 for file = files'
     
-    disp(strcat('  Processing ', file.name));
+    disp(strcat('  Processing : ', file.name));
     img = imread(strcat('../Urtica dioica BW/', file.name), 'tiff');
     
-    vect = [2 TIMVecteur(img)'];
+    vect = [-1 TIMVecteur(img)'];
     thisData(i, :) = vect;
     
     i = i + 1;
