@@ -1,7 +1,7 @@
 
 %img = imread('iPAD2_C11_EX06_B.TIFF', 'tiff');
 
-TIMVECTEUR_SIZE = 4;
+TIMVECTEUR_SIZE = 6;
 
 
 %% ERABLE
@@ -11,6 +11,8 @@ thisData = zeros(length(files), TIMVECTEUR_SIZE + 1); % + 1 for label
 
 i = 1;
 for file = files'
+    
+    disp(strcat('  Processing ', file.name));
     img = imread(strcat('../Acer palmaturu BW/', file.name), 'tiff');
     
     vect = [1 TIMVecteur(img)'];
@@ -30,6 +32,8 @@ thisData = zeros(length(files), TIMVECTEUR_SIZE + 1); % + 1 for label
 
 i = 1;
 for file = files'
+    
+    disp(strcat('  Processing ', file.name));
     img = imread(strcat('../Urtica dioica BW/', file.name), 'tiff');
     
     vect = [2 TIMVecteur(img)'];

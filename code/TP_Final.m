@@ -1,7 +1,19 @@
 clear all; close all;
-load('RedW.mat');
-X0=X(find(Y==0),:);
-X1=X(find(Y==1),:);
+
+if exist('data.mat', 'file') == 2
+    load('data.mat');
+else
+    disp('data.mat not found: generating data...');
+    createData();
+    disp('Done');
+end
+
+Y = data(:, 1);
+X = data(:, 2:size(data, 2));
+
+
+X0=X(find(Y==1),:);
+X1=X(find(Y==2),:);
 
 App0=X0(1:size(X0,1)/3,:);
 Val0=X0(size(X0,1)/3+1:2*size(X0,1)/3,:);
