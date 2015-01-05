@@ -1,5 +1,5 @@
 function [ vect ] = TIMVecteur( img )
-n=5;
+n=6;
 [long, larg]=TIMRectangle(img);
 [ ri , rc, centre] = TIMCercle( img );
 [aire, perim] =getConvHullArea( img );
@@ -12,7 +12,7 @@ vect(4)=ri/rc;%'Sphéricité'
 
 
 contour = bwmorph(img,'remove');
-Mur=0
+Mur=0;
 compteur=0;
 for i=1:size(contour,1)
     for j=1:size(contour,2)
@@ -33,7 +33,11 @@ for i=1:size(contour,1)
 end
 sigr=sigr/compteur;
 
-vect(5)=Mur/sigr;
+vect(5)=Mur/sigr;%Circularité
+
+vect(6)=4*PI*long*larg/(long+larg)^2;
+
+
 
 end
 
