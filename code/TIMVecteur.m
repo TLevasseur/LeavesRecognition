@@ -33,9 +33,9 @@ for i=1:size(contour,1)
 end
 sigr=sigr/compteur;
 
-vect(5)=Mur/sigr;%Circularité
+vect(5)=0;%Mur/sigr;%Circularité
 
-vect(6)=4*PI*long*larg/(long+larg)^2;
+vect(6)=4*pi*long*larg/(long+larg)^2;
 
 
 
