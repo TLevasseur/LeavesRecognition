@@ -1,11 +1,13 @@
 
 %img = imread('iPAD2_C11_EX06_B.TIFF', 'tiff');
 
+TIMVECTEUR_SIZE = 4;
+
 
 %% ERABLE
 files = dir('../Acer palmaturu BW/*.TIFF');
 
-thisData = zeros(length(files), 10 + 1); % 10 is TIMVector length, + 1 for label
+thisData = zeros(length(files), TIMVECTEUR_SIZE + 1); % + 1 for label
 
 i = 1;
 for file = files'
@@ -24,7 +26,7 @@ data = thisData;
 %% ORTIE
 files = dir('../Urtica dioica BW/*.TIFF');
 
-thisData = zeros(length(files), 10 + 1); % 10 is TIMVector length, + 1 for label
+thisData = zeros(length(files), TIMVECTEUR_SIZE + 1); % + 1 for label
 
 i = 1;
 for file = files'
