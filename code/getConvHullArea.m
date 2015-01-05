@@ -23,7 +23,7 @@ end
 k = convhull(contourX, contourY);
 %hold on, plot(contourY(k), contourX(k), '-r'), hold off
 
-area = polyarea(contourY(k), contourX(k))
+area = polyarea(contourY(k), contourX(k));
 
 end
 
