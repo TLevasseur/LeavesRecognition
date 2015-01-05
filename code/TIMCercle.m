@@ -1,4 +1,4 @@
-function [ ri , rc ] = TIMCercle( img )
+function [ ri , rc, centre] = TIMCercle( img )
 
 conteur=0;
 sommej=0;
