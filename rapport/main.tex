@@ -2,6 +2,9 @@
 \usepackage[utf8]{inputenc}
 \usepackage[cyr]{aeguill}
 \usepackage[francais]{babel}
+\usepackage{graphicx}
+
+
 
 \title{Reconnaissance des espèces de plantes grâce à la forme de leurs feuilles}
 
@@ -15,6 +18,9 @@
 \section{Introduction}
 \input{intro.tex}
 \newpage
+
+\section{Description des données}
+\input{description.tex}
 \section{Développement}
 Le traitement de l'image est très basique: on charge une image en noir et blanc, on en trace le contour, et on calcule des paramètres propres à l'image (zones d'intéret, aire, périmètre...)
 \smallbreak
