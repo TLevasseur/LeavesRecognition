@@ -1,0 +1,27 @@
+\subsection{Définitions des propriétés géométriques invariantes}
+
+
+Afin de séparer nos données, il est nécessaire de trouver les propriétés géométriques invariantes de chaque espèces de feuilles qui serviront à définir une hypersphères pour chaque espèce.
+
+Afin de ne pas avoir de calculs trop lourds, nous avons faite le choix de nous limiter à une caractérisation de chaque feuille par un vecteur x $\in \Re ^{5}$. À ce vecteur sera ajouté un label pour l'apprentissage.
+
+\subsubsection{Rectangularité}
+La réctangularité est définie comme le rapport de la longueur sur la largeur du plus petit rectangle entourant la feuille.
+\smallbreak
+$R=\frac{longueur}{largeur}$
+\subsubsection{Sphéricité}
+La sphéricité est définie comme le rapport entre le rayon du cercle inscrit sur le rayon du cercle circonscrit.
+\smallbreak
+$S=\frac{r_{i}}{r_{c}}$
+\subsubsection{Ratio d'aire}
+Le ratio d'aire est le rapport entre l'air du polygone concave le plus petit circonscrit à la feuille et celle le plus petit rectangle entourant la feuille.
+\smallbreak
+$AO=\frac{A_{r}}{A_{C}}$
+\subsubsection{Ratio de périmètre}
+Le ratio de périmètre est le rapport entre le périmètre du polygone concave le plus petit circonscrit à la feuille et celui du plus petit rectangle entourant la feuille.
+\smallbreak
+$CP=\frac{P_{r}}{P_{C}}$
+\subsubsection{Facteur de forme}
+Le facteur de forme est une valeur utilisé pour décrire une feuille qui semble être empirique comme efficace. Elle est définit comme suit.
+\smallbreak
+$CP=\frac{4*\pi*R_{r}}{P_{r}^{2}}$

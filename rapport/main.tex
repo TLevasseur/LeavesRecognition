@@ -3,7 +3,7 @@
 \usepackage[cyr]{aeguill}
 \usepackage[francais]{babel}
 \usepackage{graphicx}
-
+\usepackage{amsmath}
 
 
 \title{Reconnaissance des espèces de plantes grâce à la forme de leurs feuilles}
@@ -21,15 +21,10 @@
 
 \section{Description des données}
 \input{description.tex}
-\section{Développement}
-Le traitement de l'image est très basique: on charge une image en noir et blanc, on en trace le contour, et on calcule des paramètres propres à l'image (zones d'intéret, aire, périmètre...)
-\smallbreak
-Ce programme est basé sur l'apprentissage des formes, et sur du clustering. \\
-On a une banque de données, des images de feuilles, qu'on traite pour calculer les paramètres décrits précédemment, et on labelle ces données: telle feuille a telles caractéristiques et c'est une feuille d'Erable, une autre a telles caractéristiques et c'est une feuille d'Ortie. \\
-A partir de cet apprentissage on obtient des classes.
-\smallbreak
-Ensuite, on calcule les caractéristiques de la feuille à analyser. Par la méthode des KPPV (Plus Proches Voisins) on cherche la classe la plus proche de notre feuille, qui est la classe la plus ressemblante. \\
-On détermine ainsi de quel type de feuille il s'agit.
+\section{Traitement des données}
+\input{Calcul.tex}
+\input{SVM.tex}
+
 \newpage
 \section{Conclusion}
 Avec nos données de test (16 et 12 feuilles de 2 types différents) on obtient 100 \% de réussite.\\
