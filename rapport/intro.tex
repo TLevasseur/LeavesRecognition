@@ -1,7 +1,13 @@
-La reconnaissance des plantes à toujours été un enjeu pour les populations, tant pour leurs suries et la reconnaissance des plantes comestibles, que la protection de l'environnement.
-Il apparait cependant que reconnaitre une plante ou un arbre n'est pas forcément facile pour toute personne non-aguerrie.
-Il s'avère donc nécessaire de créer un outil d'aide à la décision qui permettrait de classer les espèces grâce à une photo par exemple.
-Il est donc nécessaire de trouver une caractéristique distincte pour toutes les espèces de plantes qui soit disponible tout au long de l'année.
-Les fleurs n'étant disponibles que pendant une période éphémère (en plus d'être en 3 dimensions), les deux alternatives possibles sont l'étude de l'écorce ou des feuilles. Nous nous pencherons sur les feuilles afin de pouvoir aussi intégrer les fleurs à cette étude.
+Actuellement le nombre d'espèces de plantes sur Terre est estimé à 310 000 - 420 000, dont beaucoup encore inconnues. Leur reconnaissance a toujours été un enjeu primordial pour les populations, tant pour leur survie par la reconnaissance des plantes comestibles ou empoisonnées, que pour la protection de l'environnement. \\
+Différentes méthodes furent utilisées pour les classifier, allant de la morphologie à l'étude cellulaire en passant par la phytochimie. Cependant, les avancées technologiques des dernières décennies en informatique et notamment dans le domaine de la vision nous permettent à présent d'utiliser les ordinateurs pour de telles classifications. \\
+\\
+Dans ce cas, quelle partie de la plante demander à l'algorithme de reconnaître ?
+Les fleurs ? Disponibles uniquement lors des floraisons, elles forment pour un ordinateur un objet complexe puisqu'en 3D et dont une simple photo ne saurait capter l'intégralité des singularités qui les composent. Ainsi les fleurs seraient trop complexes à traiter pour un temps de présence trop court. 
+Le même raisonnement peut être tenu pour les fruit et l'écorce quant à elle n'est disponible que sur trop peu de spécimens. \\
+Reste alors les feuilles, présentes chez la majorité des plantes et durant une période plus longue que les fleurs puisqu'elles ne disparaissent habituellement qu'en hiver. Les feuilles ont la particularité d'être presque toujours en 2D permettant, à l'aide d'une simple photo du dessus, un traitement très simple de ses spécificités. \\
+\\
+Maintenant que le sujet d'étude est défini, nous devons penser aux critères de reconnaissance d'une espèce. En imagerie, deux critères principaux peuvent nous venir en tête pour différencier des feuilles : la couleur et la forme. \\
+Cependant, la couleur d'une feuille peut énormément varier, que ce soit en fonction du changement de saison qu'à cause de l'ensoleillement ou de l'humidité. Ce critère n'est donc pas assez fiable pour être utilisé parallèlement à la forme. Ainsi, les images utilisées ne nécessiteront que des nuances de gris. \\
+L'objet de notre étude portera en conclusion principalement sur les formes de feuilles variés que possèdent chaque plante.
 \paragraph{}
-Ce projet a été réalisé grâce au travail des chercheurs Ji-Xiang Du, Xiao-Feng Wang et Guo-Jun Zang publié sur science-direct.com ( 185 (2007) 883–93). Les données utilisées sont issues du site internet http://archive.ics.uci.edu/ml/datasets.html.
+Ce projet a été réalisé grâce au travail des chercheurs Ji-Xiang Du, Xiao-Feng Wang et Guo-Jun Zang et notamment à leur article publié sur science-direct.com ( 185 (2007) 883–93). Les données utilisées sont quant à elles issues du site internet http://archive.ics.uci.edu/ml/datasets.html.
