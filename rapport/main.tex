@@ -24,6 +24,7 @@
 \section{Traitement des données}
 \input{Calcul.tex}
 \input{SVM.tex}
+\input{KPPV.tex}
 
 \newpage
 \section{Conclusion}
@@ -34,6 +35,20 @@ En conclusion nous pouvons dire que l'algorithme KPPV est rapide (et pourrait m�
 Il est cependant important de relativiser cette efficacité puisque nous avons sciemment choisi des feuilles de formes peu semblables. Il serait donc intéressant dans une extension de ce projet, de voir si des feuilles d'espèces de plantes différentes mais ayant des formes similaires auraient un taux de reconnaissance aussi élevé et si tel n'était pas le cas, quelles améliorations apportées.
 \newpage
 \section{Annexes}
-Concernant le code: le programme utilise une fonction TIMVecteur qui renvoie un vecteur avec les caractéristiques de l'image.
+Concernant le code: le programme utilise une fonction TIMVecteur qui renvoie un vecteur avec les caractéristiques de la feuille dans l'image passée en paramètre. Cette fonction est utilisée par le script createData, qui préalloue une matrice de taille fixe et arbitraire.
+\smallbreak
+Donc, si on modifie la taille du vecteur retourné par TIMVecteur, il faut modifier la ligne 4 de createData.m :
+\begin{verbatim}
+TIMVECTEUR_SIZE = 6;
+\end{verbatim}
+et changer 6 en la nouvelle taille de vecteur.
+
+\paragraph{}
+Le 5e élément du vecteur retourné par TIMVecteur vaut toujours 0. Ce paramètre correspond à la circularité, et causait des problèmes de calcul avec SVM. Nous avons donc omis ce paramètre.
+
+\paragraph{}
+Une amélioration possible (et probablement prioritaire) est la récupération automatique des données: pour l'instant, il faut spécifier à la main dans quels dossiers récupérer les données d'apprentissage, donner un label unique à chaque classe de données, et faire correspondre chaque label à un nom (fonction labelToName).
+\smallbreak
+A l'avenir il faudrait un dossier 'données' qui contiendrait un dossier par classe, et utiliser le nom de ces dossiers comme label pour nos données.
 
 \end{document}

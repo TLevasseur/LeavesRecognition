@@ -1,0 +1,18 @@
+\subsection{Cas général : plusieurs espèces - Méthode des K Plus Proches Voisins (K-nearest)}
+\subsubsection{Protocole}
+Pour rendre l'application plus utile, on veut pouvoir identifier une feuille directement, au lieu de seulement choisir si elle ressemble plus à une espèce ou à une autre.
+On passe à quatre groupes de feuilles (ortie, érable, laurier et géranium dans notre exemple). On ne peut plus simplement séparer les classes par des hyperplans; on va plutot chercher à classifier les feuilles et à récupérer la classe la plus proche de notre feuille dans l'hyperplan.
+
+
+\paragraph{}
+Dans un premier temps, les feuilles sont étiquetées suivant leur classe par les un identifiant unique \{ 1 ; 2 ; 3 ; 4 \}. 
+\paragraph{}
+On repère dans l'hyperplan les coordonnées de la feuille à identifier.
+\paragraph{}
+On calcule la distance entre chaque point de l'hyperplan et le point de notre feuille. Ceci nous donne un vecteur de distances.
+\paragraph{}
+Enfin, on trie ce vecteur par ordre croissant de distances, et on décide que la classe de notre feuille est celle du premier point dans le vecteur, le point le plus proche.
+
+
+\subsubsection{Résultats}
+On obtient toujours 100 \% de succès sur nos tests avec quatre classes, pour un temps de calcul tout aussi négligeable que SVM. On peut donc affirmer qu'à petit volume, l'algorithme kppv est efficace et résoud notre problème de manière plus pertinente que SVM.
